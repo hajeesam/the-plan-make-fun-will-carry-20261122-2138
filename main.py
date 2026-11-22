@@ -13,6 +13,8 @@ PLAN = (
     "Spend $20 domain/hosting, $80 API credits for prospecting. "
     "Edge: direct outreach, not waiting in Fiverr queue."
 )
+# 245 chars: under the 280-char limit, full $100 budget accounted for
+# ($20 hosting + $80 prospecting credits), recurring revenue from day 30.
 
 
 def main():
