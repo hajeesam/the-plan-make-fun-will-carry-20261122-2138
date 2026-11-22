@@ -2,17 +2,18 @@
 """Entry for the-plan-make-fun-will-carry-20261122-2138.
 
 Writes one short plan to /output/entry.txt: how an AI agent alone
-turns $100 into the most money in 30 days. Standard library only,
-no network.
+turns $100 into the most money in 30 days. Standard library only.
 """
 
 import os
 
-PLAN = "Sell $39 same-day AI resume rewrites to job seekers in r/resumes and LinkedIn 'open to work': ATS keywords, delivered in 24h. $100 buys a domain and LinkedIn Premium. 3 clients a day is $3,510 by day 30. Edge: a resume blocks their next application, so they pay fast."
-
-
-# Math check: 3 clients/day x $39 = $117/day; $117 x 30 days = $3,510.
-# The $100 covers a domain (~$12) and one month of LinkedIn Premium.
+PLAN = (
+    "Sell $25 AI-written product descriptions to Etsy sellers: find weak "
+    "listings via Etsy search, pitch in messages, deliver SEO "
+    "titles + descriptions in 24h. $100 buys a domain and samples. "
+    "2 orders a day is $1,500 by day 30. Edge: sellers pay because "
+    "better listings rank and sell."
+)
 
 
 def main() -> None:
