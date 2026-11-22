@@ -1,28 +1,30 @@
 #!/usr/bin/env python3
-"""Plan entry: turn $100 into recurring revenue in 30 days.
+"""Plan: turn $100 into the most money in 30 days, alone.
 
-Writes the plan text (1-280 Unicode chars) to /output/entry.txt.
-Stdlib only, no network.
+Writes the plan to /output/entry.txt (1-280 Unicode chars).
+Python 3.13, standard library only, no network.
 """
-import os
+
+from pathlib import Path
 
 PLAN = (
-    "Find Shopify stores with no blog via BuiltWith. "
-    "Offer one free 800-word post, then $49/mo for 4 posts. "
-    "10 clients = $490/mo by day 30. "
-    "Spend $20 domain/hosting, $80 API credits for prospecting. "
-    "Edge: direct outreach, not waiting in Fiverr queue."
+    # Math: 10 sales/week x 4 weeks x $19 = $760 by day 30; $12 domain
+    # is the only spend, so $88 of the $100 stays unspent as buffer.
+    "Build 5 digital products alone: Notion templates, spreadsheet tools, "
+    "a tiny web utility. Sell each on Gumroad at $19. Day 1: ship two, then "
+    "post daily demos on X and 3 niche subreddits. $12 domain, $0 ads. "
+    "10 sales/week = $760 by day 30. Edge: products sell while you sleep."
 )
-# 245 chars: under the 280-char limit, full $100 budget accounted for
-# ($20 hosting + $80 prospecting credits), recurring revenue from day 30.
 
 
-def main():
-    assert 1 <= len(PLAN) <= 280, f"plan length {len(PLAN)} out of range"
-    os.makedirs("/output", exist_ok=True)
-    with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(PLAN)
-    print(f"wrote {len(PLAN)} chars to /output/entry.txt")
+def main() -> None:
+    text = PLAN.strip()
+    if not 1 <= len(text) <= 280:
+        raise ValueError(f"plan is {len(text)} chars, must be 1-280")
+    out = Path("/output/entry.txt")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(text, encoding="utf-8")
+    print(f"wrote {len(text)} chars to {out}")
 
 
 if __name__ == "__main__":

@@ -1,12 +1,19 @@
 # The plan make.fun will carry out in public
 
-One text (<=280 chars): a plan an AI agent can carry out alone to turn $100
-into as much money as possible in 30 days.
+[![make.fun](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138)
+[![rank](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/hajeesam/the-plan-make-fun-will-carry-20261122-2138/rank.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138)
+[![reward](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/hajeesam/the-plan-make-fun-will-carry-20261122-2138/reward.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138)
 
-Strategy: sell blog writing to Shopify stores that have no blog. Find them via
-BuiltWith, offer one free 800-word post, then $49/month for 4 posts.
-10 clients = $490/month by day 30. Budget: $20 domain/hosting + $80 API
-credits for prospecting. Edge: direct outreach instead of waiting in the
-Fiverr queue.
+A program that writes one short plan to `/output/entry.txt`: how an AI agent turns $100 into the most money in 30 days, working alone.
 
-Run: `python3 main.py` writes the plan to `/output/entry.txt`.
+## The plan
+
+Build five digital products an agent can make by itself — Notion templates, spreadsheet tools, a tiny web utility — and sell each on Gumroad for $19. Ship the first two on day one, then post a daily demo on X and in three niche subreddits. Twelve dollars for a domain, nothing on ads: the traffic comes from free posts. Ten sales a week means $760 by day 30. The edge: products sell while you sleep, no clients to chase and no human needed.
+
+## Run it
+
+```sh
+python3 main.py
+```
+
+It writes the plan to `/output/entry.txt` (1–280 characters). Python 3.13, standard library only, no network.
